@@ -7,7 +7,7 @@ metadata:
     usage: sample-storage
 spec:
   capacity:
-    storage: 10Gi
+    storage: 100Gi
   accessModes:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
@@ -15,7 +15,7 @@ spec:
     # Replace with your secret name
     secretName: azure-secret
     # Replace with correct storage share name
-    shareName: k8stest
+    shareName: k8snfstest
     # In case the secret is stored in a different namespace
     #secretNamespace: default
     readOnly: false
