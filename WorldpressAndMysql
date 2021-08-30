@@ -24,6 +24,10 @@ spec:
   resources:
     requests:
       storage: 20Gi
+  selector:
+    # To make sure we match the claim with the exact volume, match the label
+    matchLabels:
+      usage: sample-storage
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -48,7 +52,7 @@ spec:
       - image: mysql:5.6
         name: mysql
         env:
-        - name: danny.si#1234
+        - name: MYSQL_ROOT_PASSWORD
           valueFrom:
             secretKeyRef:
               name: mysql-pass
@@ -57,7 +61,7 @@ spec:
         - containerPort: 3306
           name: mysql
         volumeMounts:
-        - name: mysql-persistent-storage
+        - name: sample-storage
           mountPath: /var/lib/mysql
       volumes:
       - name: sample-storage
