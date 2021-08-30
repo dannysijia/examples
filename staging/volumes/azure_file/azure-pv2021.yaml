@@ -4,13 +4,14 @@ metadata:
   name: sample-storage20
   # The label is used for matching the exact claim
   labels:
-    usage: sample-storage
+    usage: sample-storage20
 spec:
   capacity:
     storage: 100Gi
   accessModes:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
+  storageClassName: manual
   azureFile:
     # Replace with your secret name
     secretName: azure-secret
