@@ -4,8 +4,7 @@ metadata:
   name: sample-storage-claim201
   # Set this annotation to NOT let Kubernetes automatically create
   # a persistent volume for this volume claim.
-  annotations:
-    volume.beta.kubernetes.io/storage-class: ""
+  # annotations: volume.beta.kubernetes.io/storage-class: ""
 spec:
   accessModes:
     - ReadWriteMany
