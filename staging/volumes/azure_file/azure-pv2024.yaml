@@ -11,7 +11,7 @@ spec:
   accessModes:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
-  # storageClassName: manual
+  storageClassName: manual
   azureFile:
     # Replace with your secret name
     secretName: azure-secret
