@@ -1,7 +1,7 @@
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
- name: sample-storage-claim201
+ name: sample-storage-claim2012
   # Set this annotation to NOT let Kubernetes automatically create
   # a persistent volume for this volume claim.
   # annotations: volume.beta.kubernetes.io/storage-class: ""
